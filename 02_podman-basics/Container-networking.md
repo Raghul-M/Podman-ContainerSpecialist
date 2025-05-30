@@ -31,7 +31,7 @@ By default, Podman **does NOT** allow container names as hostnames inside the de
 #### Create a user-defined network:
 
 ```bash
-podman network create mynet
+$ podman network create mynet
 ```
 
 * This network supports DNS by default.
@@ -40,14 +40,14 @@ podman network create mynet
 ##### Run containers attached to this network:
 
 ```bash
-podman run -d --name web --network mynet nginx
-podman run -it --network mynet alpine sh
+$ podman run -d --name web --network mynet nginx
+$ podman run -it --network mynet alpine sh
 ```
 
 * Inside the alpine container, you can ping `web` by container name:
 
 ```bash
-ping web
+$ ping web
 ```
 
 
@@ -70,7 +70,7 @@ $ podman run -it --name app2 --network mynet alpine sh
 Inside `app2` container:
 
 ```bash
-ping app1
+$ ping app1
 ```
 
 
@@ -79,7 +79,7 @@ ping app1
 To access containers from outside host:
 
 ```bash
-podman run -d -p 8080:80 nginx
+$ podman run -d -p 8080:80 nginx
 ```
 
 * Maps host port `8080` to container port `80`
@@ -88,8 +88,8 @@ podman run -d -p 8080:80 nginx
 ####  **View Networks**
 
 ```bash
-podman network ls
-podman network inspect mynet
+$ podman network ls
+$ podman network inspect mynet
 ```
 
 
