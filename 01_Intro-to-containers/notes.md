@@ -11,6 +11,8 @@ Containerization is a lightweight form of virtualization that packages an applic
 
 ### Container:
 
+
+
 A container is a lightweight, isolated environment that runs an application along with everything it needs  like libraries and dependencies  without depending on the host system. It uses the host operating system's kernel but keeps the app's files separate.
 
 #### Key points about containers:
@@ -19,9 +21,9 @@ A container is a lightweight, isolated environment that runs an application alon
 - They are created from container images.
 - They start quickly, use fewer resources, and are more portable than virtual machines (VMs).
 
-```
-Think of a container as a small, self-contained box that runs your app  like a mini-sandbox  without the heavy setup of a full operating system like a VM.
-```
+
+> 📌 Think of a container as a small, self-contained box that runs your app  like a mini-sandbox  without the heavy setup of a full operating system like a VM.
+
 
 #### Container Engine vs Container Runtime
 
@@ -44,9 +46,9 @@ What it does:
 - Runs and manages containers.
 - Talks to the runtime to actually execute the container.
 
-``` 
-Examples: Podman , Docker, CRI-O (used in OpenShift — container runtime interface only)
-```
+
+> 📌 Examples: Podman , Docker, CRI-O (used in OpenShift — container runtime interface only)
+
 
 ### Container Runtime
 
@@ -55,13 +57,13 @@ What it does:
 - Uses kernel features like namespaces, cgroups, seccomp, and SELinux.
 - Enforces isolation and resource control.
 
-```
-Examples: runc (used by Podman and Docker) , crun (faster, written in C, default in newer Podman) , containerd (used in Docker and Kubernetes) , CRI-O (used in OpenShift)
-```
 
-```
-📌  Podman uses runc or crun under the hood, while OpenShift uses CRI-O, which in turn also uses runc or crun.
-```
+> 📌 Examples: runc (used by Podman and Docker) , crun (faster, written in C, default in newer Podman) , containerd (used in Docker and Kubernetes) , CRI-O (used in OpenShift)
+
+
+
+> 📌  Podman uses runc or crun under the hood, while OpenShift uses CRI-O, which in turn also uses runc or crun.
+
 
 ----- 
 
@@ -83,7 +85,7 @@ Limit a container to 256MB of memory or 0.5 CPU cores.
 * Relevant options:
 
   ```bash
-  podman run --memory=256m --cpus=0.5 ...
+  $ podman run --memory=256m --cpus=0.5 ...
   ```
 
 **Internals**:
@@ -114,7 +116,7 @@ Namespaces are a Linux kernel feature that provides isolated environments for pr
 **Check namespaces of a container**:
 
 ```bash
-lsns -p <PID>
+$ lsns -p <PID>
 ```
 
 ---
@@ -138,13 +140,13 @@ OverlayFS (Overlay Filesystem) is a union mount filesystem implementation in Lin
 **Example**:
 
 ```bash
-podman run -it fedora /bin/bash # Changes you make go to the upperdir
+$ podman run -it fedora /bin/bash # Changes you make go to the upperdir
 ```
 
 **Check storage drivers**:
 
 ```bash
-podman info | grep -i overlay
+$ podman info | grep -i overlay
 ```
 
 ---
@@ -170,13 +172,13 @@ Adds a **mandatory access control** layer for enhanced security.
 * Fix with `:z` or `:Z` label:
 
   ```bash
-  podman run -v /data:/app:z ...
+  $ podman run -v /data:/app:z ...
   ```
 
 **Check SELinux context**:
 
 ```bash
-ls -Z /path
+$ ls -Z /path
 ```
 
 **Tip**:
@@ -201,7 +203,7 @@ ls -Z /path
 #### ✅ Tip:
 
 ```bash
-podman run -v /host/dir:/container/dir:Z ...
+$ podman run -v /host/dir:/container/dir:Z ...
 ```
 
 Use `:Z` on **SELinux systems** (RHEL, Fedora, etc.) to avoid permission issues.

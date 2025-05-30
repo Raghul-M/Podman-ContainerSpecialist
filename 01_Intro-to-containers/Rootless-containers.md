@@ -5,7 +5,7 @@
 Container technology allows developers to break down application tiers (like the backend) into smaller microservices. Since containers share the host OS kernel and use fewer resources than VMs, a single host can run many containers efficiently. However, this density increases risk — compromising one container could affect the entire host. To reduce this risk, developers follow the principle of least privilege to limit access and minimize attack surfaces.
 
 
-#### Analyzing Rootless Containers
+### Analyzing Rootless Containers
 Rootless containers, or unprivileged containers, are containers that do not require administrator privileges.
 
 **A container is rootless only when it meets the following conditions:**
@@ -76,7 +76,7 @@ systemctl --user status podman.socket
 
 > 📌 For **rootless**, use `--user` with `systemctl`.
 
-<br>
+
 
 #####  2. **Create a New User**
 
@@ -87,7 +87,7 @@ sudo passwd strangerthings
 
 > 🔑 Set any password you prefer when prompted.
 
-<br>
+
 
 ##### 3. **Login as the New User**
 
@@ -95,7 +95,6 @@ sudo passwd strangerthings
 su - strangerthings
 ```
 
-<br>
 
 #####  4. **Create a Directory for Website Content**
 
@@ -103,7 +102,7 @@ su - strangerthings
 mkdir ~/nginx-data
 ```
 
-<br>
+
 
 #####  5. **Fix Permissions (chown inside user namespace)**
 
@@ -113,7 +112,7 @@ podman unshare chown -R $(id -u):$(id -g) ~/nginx-data
 
 > This ensures the container can access the directory in rootless mode.
 
-<br>
+
 
 #####  6. **Create a Sample HTML Page**
 
@@ -121,7 +120,7 @@ podman unshare chown -R $(id -u):$(id -g) ~/nginx-data
 echo "Welcome to the upside-down!" > ~/nginx-data/index.html
 ```
 
-<br>
+
 
 #####  7. **Check SELinux Status**
 
@@ -131,7 +130,7 @@ sestatus
 
 > Ensure SELinux is `enforcing`. If it's disabled, skip the `:z` step.
 
-<br>
+
 
 #####  8. **Run NGINX Container with Volume Mount**
 
@@ -144,7 +143,7 @@ podman run -d \
 
 > 🔁 `:Z` applies a **private SELinux label** so NGINX can access the volume.
 
-<br>
+
 
 #####  9. **Verify It’s Working**
 
