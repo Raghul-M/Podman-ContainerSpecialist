@@ -170,6 +170,91 @@ sudo restorecon -Rv ~/nginx-data
 
 ---
 
+### Running Podman containers as systemd services – rootlessly and automatically on boot.
+
+
+####  Why Use systemd with Podman?
+
+In traditional Linux, services like `nginx`, `postgresql`, or `httpd` are run using `systemctl`.
+
+Similarly, you can **run your containers as services** using `systemd` — even **without root**.
+
+
+####  How to Set It Up (Rootless systemd Service)
+
+####   Generate systemd unit file
+
+```bash
+$ podman generate systemd --name <container-name> --files
+```
+
+📌 Example:
+
+```bash
+$ podman generate systemd --name web --files
+```
+
+This creates:
+
+```
+./container-web.service
+```
+
+You should **move this file to** your systemd user service directory:
+
+```bash
+$ mkdir -p ~/.config/systemd/user
+$ mv container-web.service ~/.config/systemd/user/
+```
+
+
+####  Reload systemd to recognize new service
+
+```bash
+$ systemctl --user daemon-reload
+```
+
+
+
+####  Start/Stop/Enable Your Container as a Service
+
+```bash
+$ systemctl --user start container-web.service
+$ systemctl --user enable container-web.service
+$ systemctl --user status container-web.service
+```
+
+##### ✅ Notes:
+
+* `--user` makes it a **rootless** systemd service (for your user only).
+* If you log out, by default the container will stop too.
+
+---
+
+### 🧷 Make Container Start Even After Logout or Reboot
+
+By default, user services run **only when you're logged in**.
+
+To run them on boot **regardless of login**, enable **linger**:
+
+```bash
+$ loginctl enable-linger <your-username>
+```
+
+Now the system will:
+
+* Start your container at **system boot**
+* Keep it running even after you log out
+
+To disable:
+
+```bash
+$ loginctl disable-linger <your-username>
+```
+
+---
+
+
 
 
 
