@@ -57,8 +57,15 @@ Rootless containers, or unprivileged containers, are containers that do not requ
 
   ```bash
   podman info | grep -i rootless
+  sudo podman info | grep -i rootless
   ```
+#### Permission Denied (Unprivileged user)
+In rootless Podman, ports **below 1024 (like port 80)** are privileged and cannot be bound directly by non-root users.
 
+> ✅ Solution: Use a higher port like 8080:80:
+```
+$ podman run -dit -p 8080:80 nginx
+```
 ---
 
 ### Example 
