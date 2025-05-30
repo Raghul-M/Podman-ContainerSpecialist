@@ -15,12 +15,12 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 
 ####  Chapter 2: Podman Basics
 
-* [ ]  Install and configure Podman
-* [ ]  Create and run containers using `podman run`
-* [ ]  Manage container lifecycle (`start`, `stop`, `rm`, `ps`, etc.)
-* [ ]  Expose ports, run background containers (`-p`, `-d`)
-* [ ]  Use environment variables with `-e`
-* [ ]  Explore Podman Desktop (optional GUI usage)
+* [x]  Install and configure Podman
+* [X]  Create and run containers using `podman run`
+* [X]  Manage container lifecycle (`start`, `stop`, `rm`, `ps`, etc.)
+* [X]  Expose ports, run background containers (`-p`, `-d`)
+* [X]  Use environment variables with `-e`
+* [X]  Explore Podman Desktop (optional GUI usage)
 * [ ]  **Lab**: Podman Basics
 
 #### Chapter 3: Container Images
