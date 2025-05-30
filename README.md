@@ -7,9 +7,11 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 
 #### Chapter 1: Introduction to Containers and OpenShift
 
-* [ ]  Understand what containers are and how they differ from VMs
+* [X]  Understand what containers are and how they differ from VMs
 * [ ]  Learn container orchestration with Kubernetes and OpenShift
-* [ ]  Document key differences: containers vs VMs, container images vs instances
+* [X]  Document key differences: containers vs VMs, container images vs instances
+* [X]  Important Concepts Cgroups, Namespaces, Overlay FS, SE LInux
+* [X]  Rootless Containers
 
 ####  Chapter 2: Podman Basics
 
