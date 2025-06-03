@@ -1,0 +1,5 @@
+FROM alpine:latest
+
+RUN echo "Hello Raghul" >> /hello.txt
+
+ENTRYPOINT ["cat","./hello.txt"]
