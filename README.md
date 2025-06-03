@@ -25,17 +25,17 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 
 #### Chapter 3: Container Images
 
-* [ ]  Work with container registries (Red Hat, DockerHub)
-* [ ]  Pull, inspect, tag, and remove images
-* [ ]  Image cleanup and storage optimization
+* [x]  Work with container registries (Red Hat, DockerHub)
+* [x]  Pull, inspect, tag, and remove images
+* [x]  Image cleanup and storage optimization
 * [ ]  **Lab**: Container Images
 
 ####  Chapter 4: Custom Container Images
 
-* [ ]  Write basic and advanced `Containerfile`s
-* [ ]  Use commands like `RUN`, `COPY`, `CMD`, `ENTRYPOINT`
-* [ ]  Build images using `podman build`
-* [ ]  Explore rootless Podman usage
+* [x]  Write basic and advanced `Containerfile`s
+* [x]  Use commands like `RUN`, `COPY`, `CMD`, `ENTRYPOINT`
+* [x]  Build images using `podman build`
+* [x]  Explore rootless Podman usage
 * [ ]  **Lab**: Custom Container Images
 
 ####  Chapter 5: Persisting Data
