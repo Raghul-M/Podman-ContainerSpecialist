@@ -40,9 +40,9 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 
 ####  Chapter 5: Persisting Data
 
-* [ ]  Mount volumes (`-v`, `--mount`)
-* [ ]  Use bind mounts vs named volumes
-* [ ]  Deploy stateful services like databases
+* [x]  Mount volumes (`-v`, `--mount`)
+* [x]  Use bind mounts vs named volumes
+* [x]  Deploy stateful services like databases
 * [ ]  **Lab**: Persisting Data
 
 ####  Chapter 6: Troubleshooting Containers
