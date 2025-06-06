@@ -47,10 +47,10 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 
 ####  Chapter 6: Troubleshooting Containers
 
-* [ ]  View container logs
-* [ ]  Use `podman inspect`, `podman exec`, and `diff`
-* [ ]  Debug live containers and identify failures
-* [ ]  Remote debugging with port mapping and environment inspection
+* [X]  View container logs
+* [X]  Use `podman inspect`, `podman exec`, and `diff`
+* [X]  Debug live containers and identify failures
+* [X]  Remote debugging with port mapping and environment inspection
 * [ ]  **Lab**: Troubleshooting Containers
 
 ####  Chapter 7: Multi-container Apps with Podman Compose
