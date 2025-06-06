@@ -55,9 +55,9 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 
 ####  Chapter 7: Multi-container Apps with Podman Compose
 
-* [ ]  Understand `podman-compose`
-* [ ]  Build developer environments with Compose YAML
-* [ ]  Run and manage multi-service apps
+* [X]  Understand `podman-compose`
+* [X]  Build developer environments with Compose YAML
+* [X]  Run and manage multi-service apps
 * [ ]  **Lab**: Multi-container Applications
 
 ####  Chapter 8: OpenShift and Kubernetes Orchestration
