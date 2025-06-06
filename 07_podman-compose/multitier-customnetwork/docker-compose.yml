@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    networks:
+      - mynetwork
+    volumes:
+      - ./html:/usr/share/nginx/html:Z
+
+  api:
+    image: httpd:latest
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
