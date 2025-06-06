@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:15
+    environment:
+       POSTGRES_PASSWORD: redhat
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+
+volumes:
+  pgdata: 
+
+  # podman exec -it <containername> psql -U postgres
+  #\l - list databases
+  #\q - quit
+  # CREATE DATABASE testdb;  # create database

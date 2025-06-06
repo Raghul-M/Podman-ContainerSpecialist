@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  frontend:
+    image: nginx
+    ports:
+     - 8080:80
+  backend:
+    image: redis:alpine
+    volumes:
+      - redisdata:/data
+      
+volumes:
+  redisdata:
