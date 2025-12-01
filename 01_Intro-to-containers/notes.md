@@ -27,12 +27,11 @@ A container is a lightweight, isolated environment that runs an application alon
 
 #### Container Engine vs Container Runtime
 
-Here's your corrected table with proper formatting and spacing for the examples:
 
 | Term           | Description                                                                                                          |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Container Engine**  | CLI / tool users interact with to build, run, and manage containers.  e.g., Docker CLI, Podman CLI.                           |
-| **Container Runtime** | Low-level tool responsible for creating and running containers using Linux kernel features.  e.g., runc, cri-o, containerd. |
+| **Container Engine**  | CLI / tool users interact with to build, run, and manage containers.  e.g., Docker CLI, Podman CLI.(User-facing tool that orchestrates everything.)                           |
+| **Container Runtime** | Low-level tool responsible for creating and running containers using Linux kernel features(namespaces, cgroups, seccomp, etc..)  e.g., runc, cri-o, containerd. |
 
 
 
