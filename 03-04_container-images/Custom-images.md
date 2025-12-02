@@ -154,6 +154,7 @@ podman build -t myapp:latest .
 
 * `--pull`: always attempt to pull a newer version of the base image.
 <br>
+
   ```bash
   podman build --pull -t myapp:latest .
   ```
