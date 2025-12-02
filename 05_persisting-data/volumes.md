@@ -43,11 +43,11 @@ echo "Hello Raghul" > ~/html/index.html
 podman run --rm -d -p 8080:80 -v ~/html:/usr/share/nginx/html:Z nginx
 ```
 
-* `~/html` = Host dir
+```~/html``` = Host dir
 <br>
-* `/usr/share/nginx/html` = NGINX web root
- <br>
-* `:Z` = SELinux relabel (more below)
+```/usr/share/nginx/html``` = NGINX web root
+<br>
+```:Z``` = SELinux relabel (more below)
 
  Now visit `http://localhost:8080` → you'll see `"Hello Raghul"`
 
