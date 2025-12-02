@@ -26,7 +26,8 @@
 #### On RHEL, Fedora, CentOS:
 
 ```bash
-sudo dnf install -y podman-compose
+sudo dnf install -y python3-pip
+pip3 install --user podman-compose
 ```
 
 #### On Ubuntu:
