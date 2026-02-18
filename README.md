@@ -21,14 +21,14 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 * [X]  Expose ports, run background containers (`-p`, `-d`)
 * [X]  Use environment variables with `-e`
 * [X]  Explore Podman Desktop (optional GUI usage)
-* [ ]  **Lab**: Podman Basics
+* [X]  **Lab**: Podman Basics
 
 #### Chapter 3: Container Images
 
 * [x]  Work with container registries (Red Hat, DockerHub)
 * [x]  Pull, inspect, tag, and remove images
 * [x]  Image cleanup and storage optimization
-* [ ]  **Lab**: Container Images
+* [X]  **Lab**: Container Images
 
 ####  Chapter 4: Custom Container Images
 
@@ -36,14 +36,14 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 * [x]  Use commands like `RUN`, `COPY`, `CMD`, `ENTRYPOINT`
 * [x]  Build images using `podman build`
 * [x]  Explore rootless Podman usage
-* [ ]  **Lab**: Custom Container Images
+* [X]  **Lab**: Custom Container Images
 
 ####  Chapter 5: Persisting Data
 
 * [x]  Mount volumes (`-v`, `--mount`)
 * [x]  Use bind mounts vs named volumes
 * [x]  Deploy stateful services like databases
-* [ ]  **Lab**: Persisting Data
+* [X]  **Lab**: Persisting Data
 
 ####  Chapter 6: Troubleshooting Containers
 
@@ -51,27 +51,26 @@ Podman Notes and EX-188 Container Specialist Exam Preparation Guide and Resource
 * [X]  Use `podman inspect`, `podman exec`, and `diff`
 * [X]  Debug live containers and identify failures
 * [X]  Remote debugging with port mapping and environment inspection
-* [ ]  **Lab**: Troubleshooting Containers
+* [X]  **Lab**: Troubleshooting Containers
 
 ####  Chapter 7: Multi-container Apps with Podman Compose
 
 * [X]  Understand `podman-compose`
 * [X]  Build developer environments with Compose YAML
 * [X]  Run and manage multi-service apps
-* [ ]  **Lab**: Multi-container Applications
+* [X]  **Lab**: Multi-container Applications
 
 ####  Chapter 8: OpenShift and Kubernetes Orchestration
 
-* [ ]  Deploy containers on OpenShift using CLI and web console
-* [ ]  Manage pods, services, and routes
-* [ ]  Multi-pod application deployment
-* [ ]  **Lab**: Container Orchestration on OpenShift
+* [X]  Deploy containers on OpenShift using CLI and web console
+* [X]  Manage pods, services, and routes
+* [X]  Multi-pod application deployment
+* [X]  **Lab**: Container Orchestration on OpenShift
 
 ####  Chapter 9: Comprehensive Review
 
-* [ ] Revise all core tasks from previous chapters
-* [ ] Practice lab scenarios without step-by-step guidance
-* [ ] Perform container-to-OpenShift migration mentally and practically
+* [X] Revise all core tasks from previous chapters
+* [X] Practice lab scenarios without step-by-step guidance
 
 ---
 
